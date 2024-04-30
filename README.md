@@ -11,4 +11,4 @@ We use a LD_PRELOAD hook in the read() call in the parent shell process (tested 
 Compile with `gcc -shared -fPIC -ldl -o inject.so inject.c`. Run with `LD_PRELOAD=./inject.so bash`. Note this tool makes no attempt to conceal itself (ie a simple `echo $LD_PRELOAD` will reveal presence).
 
 ## Credits
-Credits to https://lcamtuf.substack.com/p/that-time-i-built-an-ld_preload-worm for the idea to abuse su/sudo in this way
+Credits to https://lcamtuf.substack.com/p/that-time-i-built-an-ld_preload-worm for the idea to abuse su/sudo in this way, http://www.goldsborough.me/c/low-level/kernel/2016/08/29/16-48-53-the_-ld_preload-_trick/ for the base code for LD_PRELOAD hooking
